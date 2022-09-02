@@ -1,0 +1,17 @@
+.img-card{
+    width: 115px;
+    height: 180px;
+    object-fit: contain;
+    padding: 10px;
+}
+.beer-rate{
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    text-align: right;
+}
+.beer-rate span{
+    display: block;
+    padding-top: 2px;
+    font-size: 12px;
+}
