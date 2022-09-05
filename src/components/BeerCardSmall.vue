@@ -19,14 +19,16 @@ export default {
 </script>
 <template>
   <v-card class="ma-4 small-card">
-    <img
-      :src="
-        beer.image_url
-          ? beer.image_url
-          : require('@/assets/images/beer-404.png')
-      "
-      class="img-card"
-    />
+    <div class="text-center">
+      <img
+        :src="
+          beer.image_url
+            ? beer.image_url
+            : require('@/assets/images/beer-404.png')
+        "
+        class="img-card"
+      />
+    </div>
     <v-card-title>
       {{
         beer.name.length > 12 ? `${beer.name.substring(0, 11)}...` : beer.name
@@ -43,7 +45,7 @@ export default {
           size="22"
           >{{ mdiGlassMugVariant }}</v-icon
         >
-        <span class="text">{{ beer.abv }} ABV</span>
+        <span class="text text-left">{{ beer.abv }} ABV</span>
       </div>
       {{
         beer.description.length > 60

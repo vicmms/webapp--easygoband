@@ -15,7 +15,7 @@ export default {
     <v-col cols="12" md="3">
       <SideFilters class="mx-4" />
     </v-col>
-    <v-col cols="12" md="9" class="text-center-webkit">
+    <v-col cols="12" md="9" class="text-center-webkit beers-pagination">
       <BeersPagination />
     </v-col>
   </v-row>

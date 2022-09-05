@@ -61,7 +61,6 @@ export default new Vuex.Store({
           return getters.getTotalBeers(page, allBeers);
         }
         state.totalRows = allBeers.length
-        console.log(allBeers.length)
 
         let lastPage = state.totalRows % state.pagination.per_page ? 1 : 0;
         state.totalPages = parseInt(
@@ -110,7 +109,6 @@ export default new Vuex.Store({
       state.filters = {}
     },
     SET_BEER: (state, beer) => {
-      console.log(beer)
 
       const { name, image_url, description, brewers_tips, ingredients, method, tagline } = beer
       state.beer = {

@@ -32,7 +32,7 @@ export default {
 <template>
   <div>
     <v-card>
-      <v-card-title>Filters</v-card-title>
+      <v-card-title>Filters {{ menu_before }}</v-card-title>
       <v-card-text>
         <!-- brewed before -->
         <v-menu

@@ -37,8 +37,8 @@ export default {
         </div>
         <div class="text list">
           <v-card-title class="text-h5">{{
-            isMobile && beer.name.length > 12
-              ? `${beer.name.substring(0, 11)}...`
+            isMobile && beer.name.length > 10
+              ? `${beer.name.substring(0, 9)}..`
               : beer.name
           }}</v-card-title>
           <v-card-subtitle>
@@ -57,9 +57,16 @@ export default {
           <v-card-text>
             {{
               isMobile
-                ? beer.description.substring(0, 120)
+                ? beer.description.substring(0, 85)
                 : beer.description.substring(0, 200)
             }}
+            <span
+              v-if="
+                (isMobile && beer.description.length > 85) ||
+                beer.description.length > 200
+              "
+              >..</span
+            >
           </v-card-text>
           <v-card-actions class="justify-end">
             <router-link
