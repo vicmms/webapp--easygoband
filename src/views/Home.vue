@@ -1,54 +1,22 @@
 <script>
-import BeerCard from "@/components/BeerCard";
-import { mapState } from "vuex";
+import BeersPagination from "@/components/BeersPagination.vue";
+import SideFilters from "@/components/SideFilters.vue";
 
 export default {
   components: {
-    BeerCard,
-  },
-  computed: {
-    ...mapState({
-      beers: (state) => state.beers,
-    }),
-  },
-  data() {
-    return {
-      viewList: true,
-      pagination: {
-        currentPage: 1,
-        perPage: 5,
-      },
-    };
-  },
-  methods: {
-    async fetchBeers() {
-      await this.$store.dispatch("fetchBeers", this.pagination);
-    },
-  },
-  mounted() {
-    this.fetchBeers();
+    BeersPagination,
+    SideFilters,
   },
 };
 </script>
 
 <template>
-  <v-container>
-    <v-row v-if="viewList">
-      <v-col cols="12" :key="beer.id" v-for="beer in this.beers">
-        <BeerCard :beer="beer" />
-      </v-col>
-    </v-row>
-    <v-row v-else> </v-row>
-    <v-row>
-      <v-col cols="12" class="d-flex justify-center mt-5">
-        <v-pagination
-          v-model="pagination.currentPage"
-          :length="4"
-          :total-visible="6"
-          circle
-          @input="fetchBeers"
-        ></v-pagination>
-      </v-col>
-    </v-row>
-  </v-container>
+  <v-row class="mt-16">
+    <v-col cols="12" md="3">
+      <SideFilters class="mx-4" />
+    </v-col>
+    <v-col cols="12" md="9" class="text-center-webkit">
+      <BeersPagination />
+    </v-col>
+  </v-row>
 </template>

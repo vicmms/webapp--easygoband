@@ -1,36 +1,40 @@
 <template>
   <v-app>
-    <v-app-bar app color="secondary" dark>
+    <v-app-bar app class="app-bar" height="130">
       <div class="d-flex align-center">
-        <span>
-          <router-link to="/about">Home</router-link>
-        </span>
+        <router-link to="/">
+          <img :src="require('@/assets/images/logo.png')" class="img-logo" />
+        </router-link>
       </div>
-
-      <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
     </v-app-bar>
 
     <v-main>
-      <router-view />
+      <router-view :key="$route.fullPath" />
     </v-main>
   </v-app>
 </template>
 
 <script>
+import { mapFields } from "vuex-map-fields";
+
 export default {
   name: "App",
+  computed: {
+    ...mapFields(["isMobile"]),
+  },
+  beforeDestroy() {
+    if (typeof window === "undefined") return;
 
-  data: () => ({
-    //
-  }),
+    window.removeEventListener("resize", this.onResize, { passive: true });
+  },
+  methods: {
+    onResize() {
+      this.isMobile = window.innerWidth < 600;
+    },
+  },
+  mounted() {
+    this.onResize();
+    window.addEventListener("resize", this.onResize, { passive: true });
+  },
 };
 </script>
