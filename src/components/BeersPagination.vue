@@ -44,8 +44,16 @@ export default {
       </v-col>
     </v-row>
     <v-row v-else>
-      <v-col cols="12" sm="4" md="2" :key="beer.id" v-for="beer in this.beers">
-        <BeerCardSmall :beer="beer" />
+      <v-col cols="12" sm="4" md="3" :key="beer.id" v-for="beer in this.beers">
+        <router-link
+          :to="{
+            path: '/beer-info',
+            query: { beerId: beer.id },
+          }"
+          class="d-flex align-center"
+        >
+          <BeerCardSmall :beer="beer" />
+        </router-link>
       </v-col>
     </v-row>
 

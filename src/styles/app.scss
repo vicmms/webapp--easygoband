@@ -130,9 +130,11 @@ a{
     // max-height: 1200px;
     // overflow: scroll;
 }
-.small-card{
-    width: 215px;
+.v-application .small-card{
+    width: 275px;
     height: 300px;
+    margin: 30px auto !important;
+
 }
 .small-card img{
     width: 200px;
@@ -185,6 +187,7 @@ a{
 .beer-card{
     height: 240px !important;
 }
+
 
 body::-webkit-scrollbar {
     display: none;
