@@ -34,6 +34,9 @@ Debido a que la aplicación es pequeña no fue necesario modularizar el proyecto
   conclusión?**
 
   Si, esta API soporta peticiones CORS. Utilizando cURL accedemos a los request headers donde podemos ver la configuración CORS del servidor como lo es el access-control-allow-origin: \* que nos indica que no se tiene ninguna restricción a dominios y el access-control-allow-methods que nos indica los métodos permitidos desde los dominios cruzados.
+  
+  ![curl](https://user-images.githubusercontent.com/34203591/188571983-8608223e-9455-44d2-8573-56b685bda071.JPG)
+
 
 - **¿Cómo rastrearías un problema de rendimiento en producción? ¿Alguna
   vez has tenido que hacerlo?**
@@ -44,29 +47,4 @@ Debido a que la aplicación es pequeña no fue necesario modularizar el proyecto
 
 - **Descríbete a ti mismo en formato JSON.**
 
-    {
-      "name":"Victor Manuel Morales Sauz",
-      "age":"25",
-      "height": {
-        "value": 1.8,
-        "unit": "meters"
-      },
-      "weight":{
-        "value": 83,
-        "unit": "kilograms"
-      },
-      "gender":"Male",
-      "hobbies": ["swimming", "soccer", "videogames", "traveling"],
-      "programming_knowledge":{
-        "frontend": {
-          "languages": ["HTML", "CSS", "JavaScript"],
-          "frameworks": ["VueJs", "ReactJs", "BootstrapCss", "TailwindCss", "Vuetify"]
-        },
-      "backend": {
-          "languages": ["PHP", "JAVA", "NodeJs"],
-          "frameworks": ["Laravel", "Express"]
-        }
-      },
-      "collage_degree":"Systems Engineering",
-      "about":"I am a motivated programmer, who likes challenges and continuous learning, excited to participate in new projects.",
-  }
+    ![Captura](https://user-images.githubusercontent.com/34203591/188572659-521ceb06-eec6-4e28-9fd3-2ca8e6fb6cf1.JPG)
