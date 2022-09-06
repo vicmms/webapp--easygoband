@@ -30,6 +30,7 @@ export default {
                   : require('@/assets/images/beer-404.png')
               "
             />
+            <span>{{ `"${beer.tagline}"` }}</span>
           </div>
         </v-col>
         <v-col cols="12" md="7" class="p-none right-animation">
@@ -37,8 +38,8 @@ export default {
             <div>
               <h2>
                 {{ beer.name
-                }}<span class="tagline">{{
-                  `&nbsp;&nbsp;-&nbsp;&nbsp;${beer.tagline}`
+                }}<span class="abv-text">{{
+                  `&nbsp;&nbsp;-&nbsp;&nbsp;${beer.abv} ABV`
                 }}</span>
               </h2>
               <p>Description</p>

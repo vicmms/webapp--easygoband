@@ -10,7 +10,6 @@ export default new Vuex.Store({
     view: 'list', //list/grid
     beers: [],
     beer: null,
-    randomBeers: [],
 
     pagination: {
       page: 1,
@@ -19,7 +18,7 @@ export default new Vuex.Store({
     pageOptions: [10, 25, 50, 80],
     totalRows: 0,
     totalPages: 0,
-    //YYYY-MM format for v-picker, The API needs MM-YYYY format
+    //YYYY-MM format aux for v-picker, The API needs MM-YYYY format
     brewed_before: null,
     brewed_after: null,
 
@@ -36,6 +35,7 @@ export default new Vuex.Store({
 
   getters: {
     getField,
+    // solo se envian los query params con valores validos y se formatea la fecha en forma MM-YYYY como la api lo solicita
     validFilterParams(state, getters) {
       state.filters.brewed_before = getters.formatDate(state.brewed_before)
       state.filters.brewed_after = getters.formatDate(state.brewed_after)
@@ -87,12 +87,7 @@ export default new Vuex.Store({
     async fetchBeerById({ commit }, id) {
       const response = await axios.get(`beers/${id}`);
       commit('SET_BEER', response.data[0]);
-    },
-    setTotalRows({ commit }, newValue) {
-      commit("SET_TOTAL_ROWS", newValue);
-    },
-    setTotalPages({ commit }, newValue) {
-      commit("SET_TOTAL_PAGES", newValue);
+      console.log(response.data)
     },
   },
   mutations: {
@@ -100,17 +95,17 @@ export default new Vuex.Store({
     SET_BEERS: (state, beers) => {
       state.beers = beers
     },
-    SET_RANDOM_BEERS_PARAMS: (state, page) => {
-      const per_page = page ? page : 1
-      state.pagination = {
-        page: 10,
-        per_page,
-      }
-      state.filters = {}
-    },
+    // SET_RANDOM_BEERS_PARAMS: (state, page) => {
+    //   const per_page = page ? page : 1
+    //   state.pagination = {
+    //     page: 10,
+    //     per_page,
+    //   }
+    //   state.filters = {}
+    // },
     SET_BEER: (state, beer) => {
 
-      const { name, image_url, description, brewers_tips, ingredients, method, tagline } = beer
+      const { name, image_url, description, brewers_tips, ingredients, method, tagline, abv } = beer
       state.beer = {
         name,
         image_url,
@@ -118,7 +113,8 @@ export default new Vuex.Store({
         brewers_tips,
         ingredients,
         method,
-        tagline
+        tagline,
+        abv
       }
     },
   },
