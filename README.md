@@ -27,9 +27,9 @@ Debido a que la aplicación es pequeña no fue necesario modularizar el proyecto
 
   Para la realización de este mini proyecto se ha aplicado principalmente el principio ¨Single Responsability¨ enfocados en los componentes.
 
-- ** ¿Cuánto tiempo has estado pensando y escribiendo tests del código? Si
+- **¿Cuánto tiempo has estado pensando y escribiendo tests del código? Si
   hubieras tenido mucho más tiempo... ¿qué habrías añadido? Si no has
-  realizado tests, ¿qué herramientas habrías utilizado para llevarlos a cabo? **
+  realizado tests, ¿qué herramientas habrías utilizado para llevarlos a cabo?**
 
   El tiempo dedicado a pensar y realizar test fue alrededor de dos horas, debido a que la API que se estaba implementando no proporcionaba cierta información o funciones necesarias para el desarrollo, por ejemplo el total de registros que existen en la consulta, por lo que parte de este tiempo se designó a resolver estos problemas y probar su funcionamiento usando el paradigma TDD.
   De haber contado con más tiempo se podría haber realizado test de componentes y unitarios con las herramientas de testing de vue.
