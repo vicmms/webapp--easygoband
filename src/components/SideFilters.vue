@@ -130,10 +130,16 @@ export default {
         </v-slider>
       </v-card-text>
       <v-card-actions class="justify-center">
-        <v-btn class="my-2 btn-primary" @click="applyFilters()">
-          Apply Filters
-        </v-btn>
-        <v-btn class="my-2" @click="resetFilters()"> Reset Filters </v-btn>
+        <v-row class="">
+          <v-col class="text-center">
+            <v-btn class="my-2 btn-primary" @click="applyFilters()">
+              Apply Filters
+            </v-btn>
+          </v-col>
+          <v-col class="text-center">
+            <v-btn class="my-2" @click="resetFilters()"> Reset Filters </v-btn>
+          </v-col>
+        </v-row>
       </v-card-actions>
     </v-card>
   </div>
