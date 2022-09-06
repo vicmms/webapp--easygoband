@@ -56,3 +56,11 @@ Debido a que la aplicación es pequeña no fue necesario modularizar el proyecto
 - **Descríbete a ti mismo en formato JSON.**
 
     ![Captura](https://user-images.githubusercontent.com/34203591/188572659-521ceb06-eec6-4e28-9fd3-2ca8e6fb6cf1.JPG)
+
+## Screenshots
+
+![1](https://user-images.githubusercontent.com/34203591/188692002-f99fca4a-4491-4059-a205-4ef586dcf9e6.JPG)
+![2](https://user-images.githubusercontent.com/34203591/188692249-71e81b4d-ef89-41a1-b3ea-f92a47e114e8.JPG)
+![3](https://user-images.githubusercontent.com/34203591/188692324-5a6e52f9-7f6b-4d5c-b3d5-5ae1fd9b0ece.JPG)
+![4](https://user-images.githubusercontent.com/34203591/188692394-f7bf5d24-a645-4d33-8947-d2187e6aaa1f.JPG)
+
