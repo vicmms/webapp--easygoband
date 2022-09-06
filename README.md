@@ -1,5 +1,13 @@
 ## Prueba Técnica - Desarrollador Frontend 2022
 
+### Acceder al proyecto
+Ingresa a https://vicmms.github.io/
+O bien, ejecutar los comandos:
+`git clone https://github.com/vicmms/webapp--easygoband.git`
+`cd webapp--easygoband.git`
+`npm i`
+`npm run serve`
+
 ### Razonamiento del problema
 
 Básicamente el problema planteado es mostrar al usuario un listado de cervezas obtenidas de la API https://api.punkapi.com/v2/ de manera paginada y de que sea intuitiva. Se agregaron además algunas funciones extra como lo son la vista individual de cada cerveza, un slider con cervezas sugeridas, imagen para indicar que no hay resultados y la opción para cambiar la vista del listado de cervezas.
