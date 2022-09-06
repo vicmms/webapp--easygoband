@@ -1,5 +1,5 @@
 module.exports = {
-  publicPath: process.env.NODE_ENV === 'production' ? '/webapp--easygoband/' : '/',
+  publicPath: '/webapp--easygoband/',
   transpileDependencies: [
     'vuetify'
   ]
