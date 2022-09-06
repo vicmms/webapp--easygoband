@@ -4,7 +4,7 @@
 Ingresa a https://vicmms.github.io/webapp--easygoband/
 O bien, ejecutar los comandos:
 `git clone https://github.com/vicmms/webapp--easygoband.git`
-`cd webapp--easygoband.git`
+`cd webapp--easygoband`
 `npm i`
 `npm run serve`
 
