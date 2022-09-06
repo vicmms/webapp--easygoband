@@ -47,29 +47,4 @@ Debido a que la aplicación es pequeña no fue necesario modularizar el proyecto
 
 - **Descríbete a ti mismo en formato JSON.**
 
-    {
-      "name":"Victor Manuel Morales Sauz",
-      "age":"25",
-      "height": {
-        "value": 1.8,
-        "unit": "meters"
-      },
-      "weight":{
-        "value": 83,
-        "unit": "kilograms"
-      },
-      "gender":"Male",
-      "hobbies": ["swimming", "soccer", "videogames", "traveling"],
-      "programming_knowledge":{
-        "frontend": {
-          "languages": ["HTML", "CSS", "JavaScript"],
-          "frameworks": ["VueJs", "ReactJs", "BootstrapCss", "TailwindCss", "Vuetify"]
-        },
-      "backend": {
-          "languages": ["PHP", "JAVA", "NodeJs"],
-          "frameworks": ["Laravel", "Express"]
-        }
-      },
-      "collage_degree":"Systems Engineering",
-      "about":"I am a motivated programmer, who likes challenges and continuous learning, excited to participate in new projects.",
-  }
+    ![Captura](https://user-images.githubusercontent.com/34203591/188572659-521ceb06-eec6-4e28-9fd3-2ca8e6fb6cf1.JPG)
