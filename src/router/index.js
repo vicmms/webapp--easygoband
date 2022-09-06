@@ -17,6 +17,10 @@ const routes = [
     component: Beer,
     props: true,
   },
+  {
+    path: '*',
+    component: Home
+  }
 
 ]
 
